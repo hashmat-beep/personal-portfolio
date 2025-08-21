@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hashmatullah Ghani — Portfolio</title>
+  <meta name="description" content="CS @ UVA — Projects, experience, and contact." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/973d6ee8a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="#home">Hashmatullah</a></div>
+      <nav>
+        <button class="burger" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+        <div class="menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+ <!-- HERO -->
+<main id="home" class="container section">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">CS @ UVA • Full-stack & AI</p>
+      <h1>Hi, I’m Hashmatullah. I build fast, clean web apps.</h1>
+      <p class="lead">Focused on simple UX, solid code, and shipping.</p>
+      <div class="actions no-wrap">
+        <a class="btn primary" href="#contact">Contact Me</a>
+        <a class="btn" href="photos/resume.pdf" download>Download Résumé</a>
+        <a class="btn" href="#projects">See Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="photos/headshot.jpg" alt="Photo of Hashmatullah Ghani" />
+    </div>
+  </section>
+</main>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="container section">
+    <h2>About Me</h2>
+    <p class="kv" style="margin-top:8px;">
+      U.S. Citizen • Woodbridge, VA • <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a> • <a href="tel:+15717750414">571‑775‑0414</a><br/>
+      <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+
+    <div class="grid grid-2" style="margin-top:16px;">
+      <div class="card">
+        <h3>Skills</h3>
+        <ul style="margin-top:8px; padding-left:18px;">
+          <li><strong>Languages:</strong> Java, C++, Python, C, JavaScript, TypeScript, HTML/CSS, Assembly, JSON, XML, SQL</li>
+          <li><strong>Frameworks:</strong> React, Node.js, Vue, Vite, Spring Boot, Tailwind CSS, Express</li>
+          <li><strong>Tools/DB:</strong> Git/GitHub, Docker, Eclipse, MongoDB, PostgreSQL, Maven/Gradle, JUnit, Microsoft Office</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <p class="kv" style="margin-top:8px;">
+          <strong>University of Virginia</strong> — B.S. Computer Science; Minor in Data Science<br/>
+          <em>Expected May 2026</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container section">
+    <h2>Projects</h2>
+    <div class="work-grid" style="margin-top:12px;">
+      <article class="work card">
+        <img src="photos/project1.jpg" alt="ResuMatch screenshot placeholder" />
+        <div class="layer">
+          <h3>ResuMatch — AI Resume Analyzer</h3>
+          <p class="kv">Serverless app that scores resumes vs job descriptions and suggests keywords.</p>
+          <div class="badges"><span class="badge">React</span><span class="badge">TypeScript</span><span class="badge">Tailwind</span><span class="badge">Claude (puter.js)</span></div>
+          <div class="proj-actions">
+            <a class="btn" href="https://github.com/hashmat-beep/your-resume-analyzer" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work card">
+        <img src="photos/project2.jpg" alt="CodeBud screenshot placeholder" />
+        <div class="layer">
+          <h3>CodeBud — AI Programming Assistant</h3>
+          <p class="kv">Lightweight ChatGPT-style helper for coding explanations and debugging.</p>
+          <div class="badges"><span class="badge">Vite</span><span class="badge">JS</span><span class="badge">OpenAI API</span></div>
+          <div class="proj-actions">
+            <a class="btn" href="https://github.com/hashmat-beep/Codebud-AI" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work card">
+        <img src="photos/project3.jpg" alt="FitTrack screenshot placeholder" />
+        <div class="layer">
+          <h3>FitTrack — Fitness Progress Tracker</h3>
+          <p class="kv">Java Spark backend + CSV storage; weekly summaries and progress tracking.</p>
+          <div class="badges"><span class="badge">Java</span><span class="badge">Spark</span><span class="badge">Maven</span></div>
+          <div class="proj-actions">
+            <a class="btn" href="https://github.com/hashmat-beep/fitness-progress-tracker" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="container section">
+    <h2>Experience</h2>
+    <div class="grid" style="margin-top:12px;">
+      <article class="card">
+        <h3>IT Help Desk — Rasmus Auctions</h3>
+        <p class="kv">Woodbridge, VA • Feb 2024 – Aug 2024</p>
+        <ul style="margin-top:8px; padding-left:18px;">
+          <li>Provided technical support; troubleshot hardware, software, and network issues.</li>
+          <li>Assisted with website maintenance and resolved technical errors.</li>
+          <li>Managed user accounts, passwords, and access permissions to maintain security.</li>
+          <li>Handled customer inquiries via phone, email, and chat with timely solutions.</li>
+          <li>Documented common issues and created guides to improve troubleshooting.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container section">
+    <h2>Contact</h2>
+    <div class="grid grid-2" style="margin-top:12px;">
+      <div class="card">
+        <p class="kv">
+          Email: <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a><br/>
+          Phone: <a href="tel:+15717750414">571‑775‑0414</a><br/>
+          <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+      <div class="card">
+        <form name="submit-to-google-sheet">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="Name" placeholder="Your Name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="Email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="6" placeholder="How can I help?"></textarea>
+
+          <div style="display:flex; align-items:center; gap:10px; margin-top:12px;">
+            <button class="btn primary" type="submit">Send</button>
+            <span id="msg" class="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="kv">© <span id="y"></span> Hashmatullah Ghani</span>
+      <span class="kv">Press <span class="kbd">/</span> to jump to Contact</span>
+    </div>
+  </footer>
+
+  <script>
+    // year + keyboard shortcut
+    document.getElementById("y").textContent = new Date().getFullYear();
+    window.addEventListener("keydown", e => { if(e.key === "/") { e.preventDefault(); location.hash = "#contact"; } });
+
+    // mobile menu
+    function toggleMenu(){ document.querySelector(".menu").classList.toggle("show"); }
+
+    // Google Sheets form (unchanged endpoint)
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzJHr-2CEGXO6nSnHKN9w3AdsZ_azAL_on7TPABY4QgmRe2emkJl803Chk3Uio81Jzv/exec";
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.textContent = "Message sent successfully";
+          setTimeout(() => msg.textContent = "", 5000);
+          form.reset();
+        })
+        .catch(error => { msg.textContent = "Error sending. Try again."; });
+    });
+  </script>
+</body>
+</html>
