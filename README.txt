@@ -1,13 +1,20 @@
-# Personal Portfolio (Static HTML/CSS/JS)
+# 🚀 Hashmatullah Ghani — Personal Portfolio
 
-- Single page: Home, About, Projects, Experience, Contact
-- Contact posts to your existing Google Sheets Apps Script endpoint (unchanged).
-- Put your resume at `photos/resume.pdf` to enable the Download button.
+My personal portfolio website built with **HTML, CSS, and JavaScript**.  
+It highlights my background, skills, projects, and experience, and includes a working **Google Sheets contact form**.
 
-## Run
-Just open `index.html` in a browser (or use a live server extension).
+---
 
-## Customize
-- Replace `photos/headshot.jpg` with your photo.
-- Replace `photos/project1.jpg` etc. with real screenshots.
-- Edit content inside `index.html` text blocks.
+## 🔥 Features
+- Responsive design for desktop and mobile  
+- Hero section with intro, photo, and quick action buttons  
+- About section with education and technical skills  
+- Projects showcase (ResuMatch, CodeBud, FitTrack)  
+- Experience section with work history  
+- Contact form connected to Google Sheets (via Apps Script)  
+
+📬 Contact
+
+Email: hghani432@gmail.com
+GitHub: github.com/hashmat-beep
+LinkedIn: linkedin.com/in/hashmatullah-ghani
