@@ -27,12 +27,18 @@
   </header>
 
  <!-- HERO -->
-<main id="home" class="container section">
+ <main id="home" class="container section">
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">CS @ UVA • Full-stack & AI</p>
-      <h1>Hi, I’m Hashmatullah. I build fast, clean web apps.</h1>
-      <p class="lead">Focused on simple UX, solid code, and shipping.</p>
+      <h1>Hi, I’m Hashmatullah.</h1>
+      <p id="typed" class="lead"></p>
+      <p class="lead">
+        I’m a 4th-year CS student at UVA. I like working on real-world projects, 
+        especially with friends and teammates — building stuff that people can actually use. 
+        Outside of coding, you’ll probably catch me playing soccer, watching highlights, or just hanging out. 
+        Always trying to learn new tech, ship projects fast, and have fun while doing it.
+      </p>
       <div class="actions no-wrap">
         <a class="btn primary" href="#contact">Contact Me</a>
         <a class="btn" href="photos/resume.pdf" download>Download Résumé</a>
@@ -47,36 +53,36 @@
 </main>
 
 
-  <!-- ABOUT -->
-  <section id="about" class="container section">
-    <h2>About Me</h2>
-    <p class="kv about-links">
-      U.S. Citizen • Woodbridge, VA • 
-      <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a> • 
-      <a href="tel:+15717750414">571-775-0414</a> • 
-      <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> • 
-      <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
-    
 
-    <div class="grid grid-2" style="margin-top:16px;">
-      <div class="card">
-        <h3>Skills</h3>
-        <ul style="margin-top:8px; padding-left:18px;">
-          <li><strong>Languages:</strong> Java, C++, Python, C, JavaScript, TypeScript, HTML/CSS, Assembly, JSON, XML, SQL</li>
-          <li><strong>Frameworks:</strong> React, Node.js, Vue, Vite, Spring Boot, Tailwind CSS, Express</li>
-          <li><strong>Tools/DB:</strong> Git/GitHub, Docker, Eclipse, MongoDB, PostgreSQL, Maven/Gradle, JUnit, Microsoft Office</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Education</h3>
-        <p class="kv" style="margin-top:8px;">
-          <strong>University of Virginia</strong> — B.S. Computer Science; Minor in Data Science<br/>
-          <em>Expected May 2026</em>
-        </p>
-      </div>
+ <!-- ABOUT -->
+<section id="about" class="container section reveal">
+  <h2>About Me</h2>
+  <p class="kv about-links">
+    U.S. Citizen • Woodbridge, VA • 
+    <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a> • 
+    <a href="tel:+15717750414">571-775-0414</a> • 
+    <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> • 
+    <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+
+  <div class="grid grid-2" style="margin-top:16px;">
+    <div class="card">
+      <h3>Skills</h3>
+      <ul style="margin-top:8px; padding-left:18px;">
+        <li><strong>Languages:</strong> Java, C++, Python, C, JavaScript, TypeScript, HTML/CSS, Assembly, JSON, XML, SQL</li>
+        <li><strong>Frameworks:</strong> React, Node.js, Vue, Vite, Spring Boot, Tailwind CSS, Express</li>
+        <li><strong>Tools/DB:</strong> Git/GitHub, Docker, Eclipse, MongoDB, PostgreSQL, Maven/Gradle, JUnit, Microsoft Office</li>
+      </ul>
     </div>
-  </section>
+    <div class="card">
+      <h3>Education</h3>
+      <p class="kv" style="margin-top:8px;">
+        <strong>University of Virginia</strong> — B.S. Computer Science; Minor in Data Science<br/>
+        <em>Expected May 2026</em>
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- PROJECTS -->
   <section id="projects" class="container section">
@@ -185,9 +191,9 @@
   <footer>
     <div class="container footer-inner">
       <span class="kv">© <span id="y"></span> Hashmatullah Ghani</span>
-      <span class="kv">Press <span class="kbd">/</span> to jump to Contact</span>
     </div>
   </footer>
+  
   
   <script>
     // year + keyboard shortcut
@@ -213,5 +219,73 @@
         .catch(error => { msg.textContent = "Error sending. Try again."; });
     });
   </script>
+
+<script>
+  function playBrandAnimation() {
+    const a = document.querySelector('.brand a');
+    if (!a) return;
+    const text = a.getAttribute('data-text') || a.textContent.trim();
+    a.setAttribute('data-text', text);   // remember original
+    a.textContent = '';                  // clear text
+    [...text].forEach((ch, i) => {
+      const span = document.createElement('span');
+      span.className = 'char' + (ch === ' ' ? ' space' : '');
+      span.textContent = ch;
+      span.style.animationDelay = (i * 0.05) + 's'; // staggered
+      a.appendChild(span);
+    });
+  }
+
+  // run once on page load
+  document.addEventListener('DOMContentLoaded', playBrandAnimation);
+
+  // replay on click
+  document.querySelector('.brand a').addEventListener('click', (e) => {
+    e.preventDefault();
+    playBrandAnimation();
+  });
+</script>
+
+<script>
+  const roles = ["Software Engineer", "Web Developer", "AI Enthusiast"];
+  let i = 0, j = 0;
+  const speed = 100;  // typing speed
+
+  function type() {
+    if (j < roles[i].length) {
+      document.getElementById("typed").textContent += roles[i][j];
+      j++;
+      setTimeout(type, speed);
+    } else {
+      setTimeout(erase, 1200); // pause before erasing
+    }
+  }
+
+  function erase() {
+    if (j > 0) {
+      document.getElementById("typed").textContent = roles[i].substring(0, j - 1);
+      j--;
+      setTimeout(erase, 50);
+    } else {
+      i = (i + 1) % roles.length; // next role
+      setTimeout(type, 400);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", type);
+</script>
+
+<script>
+  // reveal elements on scroll
+  function revealOnScroll() {
+    document.querySelectorAll('.reveal').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
 </body>
 </html>
