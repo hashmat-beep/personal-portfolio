@@ -50,11 +50,14 @@
   <!-- ABOUT -->
   <section id="about" class="container section">
     <h2>About Me</h2>
-    <p class="kv" style="margin-top:8px;">
-      U.S. Citizen • Woodbridge, VA • <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a> • <a href="tel:+15717750414">571‑775‑0414</a><br/>
-      <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> ·
+    <p class="kv about-links">
+      U.S. Citizen • Woodbridge, VA • 
+      <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a> • 
+      <a href="tel:+15717750414">571-775-0414</a> • 
+      <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> • 
       <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">LinkedIn</a>
     </p>
+    
 
     <div class="grid grid-2" style="margin-top:16px;">
       <div class="card">
@@ -132,32 +135,44 @@
           <li>Documented common issues and created guides to improve troubleshooting.</li>
         </ul>
       </article>
+      <article class="card">
+        <h3>Car Sales Associate — Unity Auto</h3>
+        <p class="kv">Woodbridge, VA • 2022 – Present</p>
+        <ul style="margin-top:8px; padding-left:18px;">
+          <li>Guide customers through vehicle selection and purchase decisions with clear communication and professionalism.</li>
+          <li>Develop strong negotiation and customer relationship skills to close sales effectively.</li>
+          <li>Maintain up-to-date knowledge of inventory, financing options, and market trends.</li>
+          <li>Collaborate with team members to hit sales targets and provide excellent after-sale support.</li>
+          <li>Built transferable skills in problem-solving, active listening, and customer-focused service.</li>
+        </ul>
+      </article>
+      
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="container section">
     <h2>Contact</h2>
     <div class="grid grid-2" style="margin-top:12px;">
-      <div class="card">
-        <p class="kv">
-          Email: <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a><br/>
-          Phone: <a href="tel:+15717750414">571‑775‑0414</a><br/>
-          <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">GitHub</a> ·
-          <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">LinkedIn</a>
-        </p>
+      <!-- left card: fills height, bigger/bolder links, one item per line -->
+      <div class="card contact-info">
+        <p><span>Email:</span> <a href="mailto:hghani432@gmail.com">hghani432@gmail.com</a></p>
+        <p><span>Phone:</span> <a href="tel:+15717750414">571-775-0414</a></p>
+        <p><span>GitHub:</span> <a href="https://github.com/hashmat-beep" target="_blank" rel="noopener">github.com/hashmat-beep</a></p>
+        <p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/hashmatullah-ghani/" target="_blank" rel="noopener">linkedin.com/in/hashmatullah-ghani</a></p>
       </div>
+  
+      <!-- right card: your Google Sheets form (unchanged) -->
       <div class="card">
         <form name="submit-to-google-sheet">
           <label for="name">Name</label>
           <input id="name" type="text" name="Name" placeholder="Your Name" required />
-
+  
           <label for="email">Email</label>
           <input id="email" type="email" name="Email" placeholder="you@example.com" required />
-
+  
           <label for="message">Message</label>
           <textarea id="message" name="Message" rows="6" placeholder="How can I help?"></textarea>
-
+  
           <div style="display:flex; align-items:center; gap:10px; margin-top:12px;">
             <button class="btn primary" type="submit">Send</button>
             <span id="msg" class="status" aria-live="polite"></span>
@@ -166,14 +181,14 @@
       </div>
     </div>
   </section>
-
+  
   <footer>
     <div class="container footer-inner">
       <span class="kv">© <span id="y"></span> Hashmatullah Ghani</span>
       <span class="kv">Press <span class="kbd">/</span> to jump to Contact</span>
     </div>
   </footer>
-
+  
   <script>
     // year + keyboard shortcut
     document.getElementById("y").textContent = new Date().getFullYear();

@@ -86,3 +86,75 @@ footer{ border-top:1px solid var(--border); margin-top: 48px; }
   .hero-photo-wrap { order: -1; margin-bottom: 10px; }
   .actions.no-wrap { flex-wrap: wrap; }
 }
+
+
+
+
+/* --- About section links --- */
+.about-links a {
+  color: #ff004f;              /* matches your accent red */
+  font-weight: 500;            /* a little bolder */
+  text-decoration: none;       /* remove underline */
+  margin: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.about-links a:hover {
+  color: #ffffff;              /* turns white on hover */
+  text-decoration: underline;  /* optional hover underline */
+}
+
+
+/* --- Project hover effect --- */
+.work.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.work.card img {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.work.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+
+/* make grid cards stretch same height */
+.grid { align-items: stretch; }
+
+/* contact card fills the rectangle and looks bold/clean */
+.contact-info{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around; /* spreads items top→bottom */
+  height:100%;
+  padding: 10px 4px;
+}
+
+.contact-info p{
+  font-size: 18px;
+  font-weight: 700;        /* bold labels/lines */
+  margin: 4px 0;
+}
+
+.contact-info span{
+  color:#ffffff;           /* label color */
+  margin-right:6px;
+}
+
+.contact-info a{
+  color:#ff004f;           /* your accent red */
+  font-weight:600;
+  text-decoration:none;
+}
+
+.contact-info a:hover{
+  color:#ffffff;
+  text-decoration:underline;
+}
