@@ -252,3 +252,18 @@ form .btn.primary {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* make sure project links are clickable */
+.proj-actions a {
+  position: relative;
+  z-index: 2;   /* keeps button above overlay */
+}
+
+.work .layer {
+  pointer-events: none;   /* stop blocking clicks */
+}
+
+.work .layer * {
+  pointer-events: auto;   /* BUT allow clicks on children (like buttons/links) */
+}
