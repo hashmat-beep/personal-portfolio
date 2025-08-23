@@ -267,3 +267,47 @@ form .btn.primary {
 .work .layer * {
   pointer-events: auto;   /* BUT allow clicks on children (like buttons/links) */
 }
+
+
+/* allow clicking on contact links */
+.contact-info {
+  position: relative;
+  z-index: 2;  /* make sure links are on top */
+}
+
+.contact-info a {
+  position: relative;
+  z-index: 3;  /* ensure clickable above card styles */
+}
+
+.contact-info {
+  pointer-events: auto; /* keep clicks active */
+}
+
+
+/* FIX: make gradient border/overlay non-blocking so inputs & buttons are clickable */
+.card { position: relative; }
+.card::before { 
+  pointer-events: none;   /* overlay can't catch clicks */
+  z-index: 0;             /* sit behind content */
+}
+.card > * {
+  position: relative;
+  z-index: 1;             /* real content above overlay */
+}
+
+/* (You already added this, keep it) — ensures project buttons remain clickable */
+.work .layer { pointer-events: none; }
+.work .layer * { pointer-events: auto; }
+
+/* hover effect for send button */
+form .btn.primary {
+  background: linear-gradient(135deg, #ff004f, #ff5f5f);
+  transition: all 0.3s ease;
+}
+
+form .btn.primary:hover {
+  background: linear-gradient(135deg, #ff5f5f, #ff004f);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 0, 79, 0.5);
+}

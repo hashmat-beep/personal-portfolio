@@ -194,31 +194,33 @@
     </div>
   </footer>
   
-  
   <script>
-    // year + keyboard shortcut
-    document.getElementById("y").textContent = new Date().getFullYear();
-    window.addEventListener("keydown", e => { if(e.key === "/") { e.preventDefault(); location.hash = "#contact"; } });
-
-    // mobile menu
-    function toggleMenu(){ document.querySelector(".menu").classList.toggle("show"); }
-
-    // Google Sheets form (unchanged endpoint)
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzJHr-2CEGXO6nSnHKN9w3AdsZ_azAL_on7TPABY4QgmRe2emkJl803Chk3Uio81Jzv/exec";
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.textContent = "Message sent successfully";
-          setTimeout(() => msg.textContent = "", 5000);
-          form.reset();
-        })
-        .catch(error => { msg.textContent = "Error sending. Try again."; });
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.forms['submit-to-google-sheet'];
+      const msg = document.getElementById("msg");
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzJHr-2CEGXO6nSnHKN9w3AdsZ_azAL_on7TPABY4QgmRe2emkJl803Chk3Uio81Jzv/exec";
+  
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        msg.textContent = "Sending...";  // show instantly
+        msg.style.color = "#ffae00";     // orange while sending
+  
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then(() => {
+            msg.textContent = "Message sent ✅";
+            msg.style.color = "#61b752"; // green
+            setTimeout(() => msg.textContent = "", 5000);
+            form.reset();
+          })
+          .catch(() => {
+            msg.textContent = "Error sending ❌";
+            msg.style.color = "#ff004f"; // red
+          });
+      });
     });
   </script>
+  
+  
 
 <script>
   function playBrandAnimation() {
